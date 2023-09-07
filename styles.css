@@ -4,11 +4,11 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(45deg, #00b4db, #0083b0, #00b4db, #0083b0);
+    background: linear-gradient(45deg, #232526, #333536, #232526, #333536);
 }
 
 .calculator {
-    background: linear-gradient(45deg, #00b4db, #0083b0, #00b4db, #0083b0);
+    background: linear-gradient(45deg, #232526, #333536, #232526, #333536);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -23,7 +23,7 @@ body {
     padding: 10px;
     margin-bottom: 25px;
     border: none;
-    background: linear-gradient(45deg, #00a8cc, #0077a2, #00a8cc, #0077a2);
+    background: linear-gradient(45deg, #232526, #333536, #232526, #333536);
     color: #fff;
     border-radius: 5px;
     overflow: hidden;
@@ -43,11 +43,12 @@ button {
     font-size: 20px;
     border: none;
     background-color: white;
-    color: #000;
+    color: #232526;
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
     overflow: hidden;
+    font-weight: 500;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
@@ -57,27 +58,28 @@ button:hover {
 }
 
 .operator {
-    background-color: #f44336;
-    color: #fff;
-}
-
-.operator:hover {
-    background-color: #d32f2f;
-}
-
-.clear {
     background-color: orange;
     color: #fff;
 }
 
+.operator:hover {
+    background-color: rgb(233, 151, 0);
+}
+
+.clear {
+    background-color: rgb(255, 81, 0);
+    color: #fff;
+}
+
 .clear:hover {
-    background-color: rgb(224, 146, 0);
+    background-color: rgb(230, 73, 0);
 }
 
 .backspace {
-    background-color: #FFC107;
+    background-color:  orange;
+    color: white;
 }
 
 .backspace:hover {
-    background-color: #ffa000;
+    background-color: rgb(233, 151, 0);
 }
