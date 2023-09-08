@@ -45,6 +45,7 @@ button {
     background-color: white;
     color: #232526;
     border-radius: 50%;
+    outline: none;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
     overflow: hidden;
