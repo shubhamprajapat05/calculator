@@ -2,9 +2,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     background: linear-gradient(45deg, #232526, #333536, #232526, #333536);
+}
+
+
+
+.calculator-container {
+    display: flex;
+    flex-direction: column; /* Change to column layout for small screens */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 20px;
+    gap: 10px;
 }
 
 .calculator {
@@ -13,9 +24,53 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     text-align: center;
-    width: 300px;
+    height: 70vh;
+    width: 90%; /* Adjust width for small screens */
+    max-width: 300px; /* Set a maximum width */
     font-family: Arial, sans-serif;
 }
+
+
+/* Add media query for screens wider than 768px */
+@media (min-width: 769px) {
+    .calculator-container {
+        flex-direction: row;
+    }
+
+    .calculator {
+        width: 300px; /* Reset width for larger screens */
+        max-width: none; /* Remove maximum width */
+    }
+}
+
+/* Add media query for screens narrower than 500px */
+@media (max-width: 500px) {
+
+    .calculator-container{
+        height: fit-content;
+    }
+
+    button {
+        width: 40px; /* Adjust button width for small screens */
+        height: 40px; /* Adjust button height for small screens */
+        font-size: 16px; /* Adjust font size for small screens */
+    }
+}
+
+/* Add media query for screens narrower than 320px */
+@media (max-width: 320px) {
+
+    .calculator-container{
+        height: fit-content;
+    }
+
+    button {
+        width: 30px; /* Further adjust button width for very small screens */
+        height: 30px; /* Further adjust button height for very small screens */
+        font-size: 14px; /* Further adjust font size for very small screens */
+    }
+}
+
 
 #result {
     width: 90%;
@@ -83,4 +138,106 @@ button:hover {
 
 .backspace:hover {
     background-color: rgb(233, 151, 0);
+}
+
+
+.history {
+    background: linear-gradient(45deg, #232526, #333536, #232526, #333536);
+    border-radius: 10px;
+    padding: 20px;
+    height: 70vh;
+    text-align: center;
+    width: 300px;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+}
+
+/* Add styling for the history section */
+.history h2 {
+    color: white;
+    margin: 0;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+ul#history-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    overflow-y: auto;
+}
+
+
+ul#history-list li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul#history-list li button {
+    background-color: transparent;
+    border: none;
+    height: fit-content;
+    color: #ff5733;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s;
+    margin-left: 10px;
+}
+
+ul#history-list li button:hover {
+    color: #ff2817;
+}
+
+
+/* Add styling to customize the scrollbars in the history div */
+.history::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+
+.history::-webkit-scrollbar-thumb {
+    background-color: #666; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+.history::-webkit-scrollbar-thumb:hover {
+    background-color: #444; /* Color of the thumb when hovered */
+}
+
+.history::-webkit-scrollbar-track {
+    background-color: #ddd; /* Color of the scrollbar track */
+    border-radius: 6px; /* Rounded corners for the track */
+}
+
+.history::-webkit-scrollbar-track:hover {
+    background-color: #ccc; /* Color of the track when hovered */
+}
+
+
+
+/* Add styling to customize the scrollbars in the body */
+body::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #666; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #444; /* Color of the thumb when hovered */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #ddd; /* Color of the scrollbar track */
+    border-radius: 6px; /* Rounded corners for the track */
+}
+
+body::-webkit-scrollbar-track:hover {
+    background-color: #ccc; /* Color of the track when hovered */
 }
