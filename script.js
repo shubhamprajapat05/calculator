@@ -35,7 +35,7 @@ function handleKeyPress(key) {
         backspace();
     } else if (key === "Delete") { // Added handling for "Delete" key
         clearResult();
-    } else if (!isNaN(key) || key === "." || "+-*/".includes(key)) {
+    } else if (!isNaN(key) || key === "." || "+-*/()".includes(key)) {
         appendToResult(key);
     }
 }
