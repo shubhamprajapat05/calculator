@@ -50,6 +50,10 @@ body {
         height: fit-content;
     }
 
+    #result{
+        margin: 30px 0;
+    }
+
     button {
         width: 40px; /* Adjust button width for small screens */
         height: 40px; /* Adjust button height for small screens */
