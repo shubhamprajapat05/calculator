@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Futuristic Calculator</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-</head>
-<body>
-    <div class="calculator">
-        <input type="text" id="result" readonly>
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div class="calculator">
+        <input type="text" id="result" readonly />
         <div class="button-grid">
-            <button onclick="appendToResult('(')">(</button>
-            <button onclick="appendToResult(')')">)</button>
-            <button class="backspace" onclick="backspace()">⌫</button>
-            <button class="operator" onclick="appendToResult('/')">/</button>
-            <button onclick="appendToResult('7')">7</button>
-            <button onclick="appendToResult('8')">8</button>
-            <button onclick="appendToResult('9')">9</button>
-            <button class="operator" onclick="appendToResult('*')">*</button>
-            <button onclick="appendToResult('4')">4</button>
-            <button onclick="appendToResult('5')">5</button>
-            <button onclick="appendToResult('6')">6</button>
-            <button class="operator" onclick="appendToResult('-')">-</button>
-            <button onclick="appendToResult('1')">1</button>
-            <button onclick="appendToResult('2')">2</button>
-            <button onclick="appendToResult('3')">3</button>
-            <button class="operator" onclick="appendToResult('+')">+</button>
-            <button onclick="appendToResult('0')">0</button>
-            <button onclick="appendToResult('.')">.</button>
-            <button class="clear" onclick="clearResult()">C</button>
-            <button class="operator" onclick="calculateResult()">=</button>
+          <button onclick="appendToResult('(')">(</button>
+          <button onclick="appendToResult(')')">)</button>
+          <button class="backspace" onclick="backspace()">⌫</button>
+          <button class="operator" onclick="appendToResult('/')">/</button>
+          <button onclick="appendToResult('7')">7</button>
+          <button onclick="appendToResult('8')">8</button>
+          <button onclick="appendToResult('9')">9</button>
+          <button class="operator" onclick="appendToResult('*')">*</button>
+          <button onclick="appendToResult('4')">4</button>
+          <button onclick="appendToResult('5')">5</button>
+          <button onclick="appendToResult('6')">6</button>
+          <button class="operator" onclick="appendToResult('-')">-</button>
+          <button onclick="appendToResult('1')">1</button>
+          <button onclick="appendToResult('2')">2</button>
+          <button onclick="appendToResult('3')">3</button>
+          <button class="operator" onclick="appendToResult('+')">+</button>
+          <button onclick="appendToResult('0')">0</button>
+          <button onclick="appendToResult('.')">.</button>
+          <button class="clear" onclick="clearResult()">C</button>
+          <button class="operator" onclick="calculateResult()">=</button>
         </div>
+      </div>
+      <div class="history">
+        <h2>Calculation History</h2>
+        <ul id="history-list">
+          <!-- Calculation history items will go here -->
+        </ul>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
